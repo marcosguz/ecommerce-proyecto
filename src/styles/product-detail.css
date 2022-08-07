@@ -1,0 +1,74 @@
+.title {
+    align-items: center;
+    display: flex;
+    height: 3rem;
+}
+
+.home {
+    color: #808080;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.home-point {
+    background-color: red;
+    border-radius: 50%;
+    height: .5rem;
+    margin-right: 1rem;
+    width: .5rem;
+}
+
+.home-title {
+    color: #2F2F2F;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.discover {
+    color: #2F2F2F;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+.price-quantity {
+    align-items: center;
+    display: flex;
+    height: 5rem;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.product-price {
+    display: flex;
+    font-weight: normal;
+}
+
+.product-price h5,
+.quantity h5 {
+    color: #808080;
+    margin-right: .75rem;
+}
+
+.shopping {
+    align-items: center;
+    background-color: #FF5159;
+    border: none;
+    color: #FFF;
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.shopping:hover {
+    background-color: #FF889D;
+}
+
+.shopping p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.shopping i {
+    margin-left: .75rem;
+}

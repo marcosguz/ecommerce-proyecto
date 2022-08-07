@@ -1,0 +1,61 @@
+img{object-fit: contain;height: 200px;}
+
+.divIconCart{
+    background-color: #ff0000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+	margin-left: 80%;
+	margin-top: -25%;
+}
+
+.divIconCart i{
+    margin-top: 12px;
+}
+
+.navBarIcons i{
+    margin-top: 19px;
+}
+.divIconCart:hover{
+	background-color: #FF006F;
+}
+
+.prices {
+	font-weight: 600;
+}
+
+.price {
+	color: gray;
+	font-size: 1.2rem;
+	font-weight: normal;
+}
+
+/* / RESPONSIVE
+   ========================================================================= / */
+ 
+/* / Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- / */
+@media (min-width: 300px) {
+
+  .navBarIcons{
+    margin-left: 50%;
+    /* border-style: solid;
+    border-color: yellow; */
+  }
+ }
+ 
+/* / Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- / */
+@media (min-width: 1024px) { }
+ 
+/* / Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+  .navBarIcons{
+    margin-left: 90%;
+    /* border-style: solid;
+    border-color: yellow; */
+  }
+ }
