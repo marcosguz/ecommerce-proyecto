@@ -45,8 +45,8 @@ const ProductsDetail = () => {
           <img src={productDetail?.productImgs} alt="" />
         </Col>
         <Col lg={6} md={3} className='mt-5'>
-			<h3 className='mb-3'>
-				<Badge>Description</Badge>
+			<h3 className='mb-3' text="dark">
+				Description
 			</h3>
 			<p style={{lineHeight:'1.6', textAlign:'justify'}}>{productDetail?.description}</p>
 			<div className="price-quantity">
