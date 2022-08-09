@@ -42,10 +42,10 @@ const Home = () => {
         <ListGroup>
           {categories.map((categorie) => (
             <ListGroup.Item
-              hover
               key={categorie.id}
               onClick={() => dispatch(filterCategoryThunk(categorie.id))}
               style={{ cursor: "pointer" }}
+              className='list'
             >
               {categorie.name}
             </ListGroup.Item>
@@ -55,7 +55,7 @@ const Home = () => {
       <Col>
         <InputGroup className="mb-3">
           <Form.Control
-            placeholder="Recipient's username"
+            placeholder="Search"
             aria-label="Recipient's username"
             aria-describedby="basic-addon2"
             onChange={(e) => setSearchValue(e.target.value)}
@@ -65,7 +65,7 @@ const Home = () => {
             variant="outline-secondary"
             onClick={() => dispatch(filterTitleThunk(searchValue))}
           >
-            Button
+            Search
           </Button>
         </InputGroup>
 
@@ -74,7 +74,7 @@ const Home = () => {
             <Col key={product.id}>
               <Card
                 onClick={() => navigate(`/products/${product.id}`)}
-                className="mb-1 p-4"
+                className="mb-1 p-4 card"
                 style={{ height: "27rem", cursor: "pointer" }}
               >
                 <Card.Img

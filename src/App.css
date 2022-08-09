@@ -1,61 +1,74 @@
-img{object-fit: contain;height: 200px;}
-
-.divIconCart{
-    background-color: #FF5159;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    color: white;
-	margin-left: 80%;
-	margin-top: -25%;
+img {
+  object-fit: contain;
+  height: 200px;
 }
 
-.divIconCart i{
-    margin-top: 12px;
+.card {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.navBarIcons i{
-    margin-top: 19px;
+.list:hover {
+   background-color: #ff5159;
+   color: #FFF;
 }
-.divIconCart:hover{
-	background-color: #FF889D;
+
+.divIconCart {
+  background-color: #ff5159;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  margin-left: 80%;
+  margin-top: -25%;
+}
+
+.divIconCart i {
+  margin-top: 12px;
+}
+
+.navBarIcons i {
+  margin-top: 19px;
+}
+.divIconCart:hover {
+  background-color: #ff889d;
 }
 
 .prices {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 .price {
-	color: gray;
-	font-size: 1.2rem;
-	font-weight: normal;
+  color: gray;
+  font-size: 1.2rem;
+  font-weight: normal;
 }
 
 /* / RESPONSIVE
    ========================================================================= / */
- 
+
 /* / Móviles en horizontal o tablets en vertical
    ------------------------------------------------------------------------- / */
 @media (min-width: 300px) {
-
-  .navBarIcons{
+  .navBarIcons {
     margin-left: 50%;
     /* border-style: solid;
     border-color: yellow; */
   }
- }
- 
+}
+
 /* / Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- / */
-@media (min-width: 1024px) { }
- 
+@media (min-width: 1024px) {
+}
+
 /* / Escritorios muy anchos
    ------------------------------------------------------------------------- */
 @media (min-width: 1200px) {
-  .navBarIcons{
+  .navBarIcons {
     margin-left: 90%;
     /* border-style: solid;
     border-color: yellow; */
   }
- }
+}

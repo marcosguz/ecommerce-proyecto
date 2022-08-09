@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import "boxicons";
 import { useNavigate } from "react-router-dom";
+import '../styles/navbar.css'
 
 
 const NavBar = () => {
@@ -26,7 +27,7 @@ const NavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav className="navBarIcons">
+          <Nav className="navBarIcons navbar__menu">
             <Nav.Link href="/#/purchaces">
               <i className="bx bx-heart" id="heart-icon"></i>
             </Nav.Link>
