@@ -1,0 +1,34 @@
+.cart-brand {
+    font-size: .75rem;
+    margin: 0;
+}
+
+.cart-title {
+    color: #2F2F2F;
+    font-weight: 600;
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.text-cart {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+}
+
+.total {
+    color: #808080;
+    font-size: .85rem;
+    margin-right: .75rem;
+}
+
+.total-price {
+    color: #2F2F2F;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.check {
+    margin-top: 1rem;
+    width: 100%;
+}
