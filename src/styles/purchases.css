@@ -2,6 +2,9 @@
     margin: 0 auto;
     width: 70%;
 }
+.product-item{
+    cursor: pointer;
+}
 
 .title {
     align-items: center;

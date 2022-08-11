@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { purchasesThunk } from "../store/slices/purchases.slice";
 import { format } from "date-fns";
@@ -7,6 +8,7 @@ import '../styles/purchases.css'
 
 const Purchases = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const purchases = useSelector((state) => state.pruchases);
 
@@ -32,7 +34,7 @@ const Purchases = () => {
               {purchase.cart.products.map((cartProduct) => (
                 <Card.Body className="purchases">
                   <ul className="purchase-products-list">
-                    <li className="product-item">
+                    <li className="product-item" onClick={() => navigate(`/products/${purchase.id}`)}>
                       <p className="name">{cartProduct.title}</p>
                       <div className="purchases-quantity">
                         <div className="card-purchases">
