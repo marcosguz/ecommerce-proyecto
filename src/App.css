@@ -69,6 +69,20 @@ img {
 .buttonRanges i {
   margin-left: .75rem;
 }
+
+.footer{
+  background-color: #373A3C;
+  text-align: center;
+  align-content: center;
+  height: 50px;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+}
 /* / RESPONSIVE
    ========================================================================= / */
 

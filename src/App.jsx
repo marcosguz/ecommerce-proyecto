@@ -22,6 +22,9 @@ function App() {
           </Route>
         </Routes>
       </Container>
+      <footer className="footer">
+        <p>Hecho con amor en Academlo 🤍</p>
+      </footer>
     </HashRouter>
   );
 }
