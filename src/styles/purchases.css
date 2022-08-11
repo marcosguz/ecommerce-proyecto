@@ -1,0 +1,88 @@
+.card-purchaces{
+    margin: 0 auto;
+    width: 70%;
+}
+
+.title {
+    align-items: center;
+    display: flex;
+    height: 2rem;
+}
+
+.home {
+    color: #808080;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.home-point {
+    background-color: red;
+    border-radius: 50%;
+    height: .5rem;
+    margin-right: 1rem;
+    width: .5rem;
+}
+
+.home-title {
+    color: #2F2F2F;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.purchases-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.my-purchases {
+    font-size: 1.3rem;
+    margin-left: 5rem;
+}
+
+.product-item {
+    list-style: none;
+}
+
+.name {
+    color: #2F2F2F;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin: 0 auto;
+    text-align: center;
+    width: 40%;
+}
+
+.card-purchases {
+    align-items: center;
+    display: flex;
+    height: 3rem;
+    justify-content: start;
+    width: 20%;
+}
+
+.purchases-quantity {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.purchases-quantity-title,
+.purchases-price__title {
+    color: #808080;
+    margin-right: .75rem;
+}
+
+.purchases-quantity-number {
+    border: 1px solid #000;
+    align-items: center;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    width: 4rem;
+}
+
+.purchases-price__total {
+    color: #2F2F2F;
+    font-weight: 600;
+}

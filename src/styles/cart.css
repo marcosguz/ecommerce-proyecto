@@ -3,11 +3,25 @@
     margin: 0;
 }
 
+.cart-title-quantity {
+    display: flex;
+    justify-content: space-between;
+}
+
 .cart-title {
     color: #2F2F2F;
     font-weight: 600;
     font-size: .9rem;
     text-decoration: none;
+}
+
+.cart-quantity {
+    color: #808080;
+    font-size: .85rem;
+}
+
+.quantity {
+    color: #2F2F2F;
 }
 
 .text-cart {
@@ -31,4 +45,17 @@
 .check {
     margin-top: 1rem;
     width: 100%;
+}
+
+.cart-total {
+    color: #808080;
+    display: flex;
+    justify-content: end;
+    margin: 1rem .75rem 0 0;
+}
+
+.getTotal {
+    color: #2F2F2F;
+    font-weight: 600;
+    margin-left: .5rem;
 }

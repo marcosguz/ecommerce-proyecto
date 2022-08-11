@@ -39,8 +39,11 @@
 }
 
 .product-price {
-    display: flex;
     font-weight: normal;
+}
+
+.quantity {
+    width: 15%;
 }
 
 .product-price h5,
@@ -57,6 +60,7 @@
     display: flex;
     height: 3.5rem;
     justify-content: center;
+    margin-top: 1rem;
     width: 100%;
 }
 

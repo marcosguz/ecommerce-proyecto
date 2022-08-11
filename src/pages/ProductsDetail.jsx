@@ -2,14 +2,25 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { getProductsThunk } from "../store/slices/products.slice";
-import { Container, Row, Col, Badge, Card, CardImg, InputGroup, Form, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Badge,
+  Card,
+  CardImg,
+  InputGroup,
+  Form
+} from "react-bootstrap";
 import "../styles/product-detail.css";
+import { addCartThunk } from "../store/slices/cart.slice";
 
 const ProductsDetail = () => {
+	
   const allProducts = useSelector((state) => state.products);
   const [productDetail, setProductDetail] = useState({});
   const [suggestedProducts, setSuggestedProducts] = useState([]);
-  const [quantity, setQuantity] = useState('');
+  const [quantity, setQuantity] = useState("");
 
   const { id } = useParams();
 
@@ -32,18 +43,18 @@ const ProductsDetail = () => {
     setSuggestedProducts(filteredProducts);
   }, [allProducts, id]);
 
-
-  
   const addCarts = () => {
-	alert("Añadido a carrito");
-	const carts = {
-		id: productDetail.id,
-		quantity: quantity
-	}
-	console.log(carts)
+    const carts = {
+      id: productDetail.id,
+      quantity
+    }
+    dispatch(addCartThunk(carts));
+  };
+
+  const cartFunction = () =>{
+	addCarts()
   }
 
-  console.log(productDetail);
 
   return (
     <Container>
@@ -56,7 +67,7 @@ const ProductsDetail = () => {
         <Col lg={5} md={3} className="mt-5">
           <img src={productDetail?.productImgs} alt="" />
         </Col>
-        <Col lg={6} md={3} className="mt-5">
+        <Col lg={6} md={4} className="mt-5">
           <h3 className="mb-3" text="dark">
             Description
           </h3>
@@ -72,24 +83,23 @@ const ProductsDetail = () => {
             </div>
             <div className="quantity">
               <h5>Quantity</h5>
-			  	<InputGroup className="mb-3">
-                  <Form.Control
-                    placeholder="Recipient's username"
-                    aria-label="Recipient's username"
-                    aria-describedby="basic-addon2"
-					value = {quantity}
-					onChange = {e => setQuantity(e.target.value)}
-                  />
-                </InputGroup>
+              <InputGroup className="mb-3" style={{width:'40px', margin:'0 auto'}}>
+                <Form.Control
+                  placeholder="1"
+                  aria-describedby="basic-addon2"
+                  value={quantity}
+                  onChange={(e) => setQuantity(e.target.value)}
+                />
+              </InputGroup>
               <div></div>
             </div>
           </div>
-          <button className="shopping" onClick={addCarts}>
+          <button className="shopping" onClick={cartFunction}>
             <p>Add to cart</p>
             <i className="fa-solid fa-cart-shopping"></i>
           </button>
         </Col>
-        <h3 className="discover">Discover similar items</h3>
+        <h3 className="mt-5 discover">Discover similar items</h3>
         <Row xs={1} md={2} xl={3} className="mt-3 g-4">
           {suggestedProducts.map((suggestedProduct) => (
             <Col key={suggestedProduct.id}>
@@ -114,7 +124,7 @@ const ProductsDetail = () => {
                     style={{ height: "30px" }}
                   >
                     <span className="price">Price:</span> $
-                    {suggestedProduct.price}
+                    {suggestedProduct.price} 
                   </Card.Text>
                   <div>
                     <div className="divIconCart">
