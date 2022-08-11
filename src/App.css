@@ -45,6 +45,30 @@ img {
   font-weight: normal;
 }
 
+.buttonRanges {
+  align-items: center;
+  background-color: #FF5159;
+  border: none;
+  color: #FFF;
+  display: flex;
+  height: 3.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 86%;
+}
+
+.buttonRanges:hover {
+  background-color: #FF889D;
+}
+
+.buttonRanges p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.buttonRanges i {
+  margin-left: .75rem;
+}
 /* / RESPONSIVE
    ========================================================================= / */
 

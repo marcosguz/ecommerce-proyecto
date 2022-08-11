@@ -20,7 +20,8 @@ const ProductsDetail = () => {
   const allProducts = useSelector((state) => state.products);
   const [productDetail, setProductDetail] = useState({});
   const [suggestedProducts, setSuggestedProducts] = useState([]);
-  const [quantity, setQuantity] = useState("");
+  // const [quantity, setQuantity] = useState("");
+  const [ quantity, setQuantity ] = useState(1);
 
   const { id } = useParams();
 
@@ -55,6 +56,14 @@ const ProductsDetail = () => {
 	addCarts()
   }
 
+  const addQuantity = () => {
+      setQuantity(quantity + 1)
+  }
+  const substractQuantity = () => {
+      if(quantity > 1) {
+          setQuantity(quantity - 1)
+      }
+  }
 
   return (
     <Container>
@@ -83,15 +92,19 @@ const ProductsDetail = () => {
             </div>
             <div className="quantity">
               <h5>Quantity</h5>
-              <InputGroup className="mb-3" style={{width:'40px', margin:'0 auto'}}>
-                <Form.Control
+              <InputGroup className="mb-3" style={{width:'150px', margin:'0 auto'}}>
+                {/* <Form.Control
                   placeholder="1"
                   aria-describedby="basic-addon2"
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
-                />
+                /> */}
+                <div className="">
+                                <i onClick={substractQuantity} className={ quantity == 1 ? 'fa-solid fa-minus arrow-disabled '  : 'fa-solid fa-minus' }style={{cursor: "pointer"}} ></i>
+                                <span>{quantity}</span>
+                                <i onClick={addQuantity} className="fa-solid fa-plus" style={{cursor: "pointer"}}></i>
+                            </div>
               </InputGroup>
-              <div></div>
             </div>
           </div>
           <button className="shopping" onClick={cartFunction}>

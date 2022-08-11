@@ -45,7 +45,11 @@
 .quantity {
     width: 15%;
 }
-
+.buttonsQuantity{
+    border-style: solid;
+    border-color: yellow;
+    width: 50%;
+}
 .product-price h5,
 .quantity h5 {
     color: #808080;
